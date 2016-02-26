@@ -1,0 +1,48 @@
+{
+  "packages": {
+    "plugins": [
+
+      {
+        "name": "Swimat",
+        "url": "https://github.com/Jintin/Swimat",
+        "description": "Swift code formatter, help you auto format your Swift code.",
+        "screenshot": "https://raw.githubusercontent.com/Jintin/Swimat/master/README/preview.gif"
+      },
+
+      {
+        "name": "BBUncrustifyPlugin",
+        "url": "https://github.com/benoitsan/BBUncrustifyPlugin-Xcode",
+        "description": "Xcode plugin to format source code using ClangFormat or Uncrustify.",
+        "screenshot": "http://f.cl.ly/items/1p3U2o1K1v361v0b1o1l/BBUncrustifyPlugin.png"
+      },
+
+      {
+        "name": "JSFormatter",
+        "url": "https://github.com/bumaociyuan/JSFormatter-Xcode",
+        "description": "Xcode plug to format js html css files",
+        "screenshot": "https://raw.githubusercontent.com/bumaociyuan/JSFormatter-Xcode/master/screenshot.gif"
+      },
+
+      {
+        "name": "KSImageNamed",
+        "url": "https://github.com/ksuther/KSImageNamed-Xcode",
+        "description": "Xcode plug-in that provides autocomplete for imageNamed: calls",
+        "screenshot": "https://raw.github.com/ksuther/KSImageNamed-Xcode/master/screenshot.gif"
+      },
+
+      {
+        "name": "OMColorSense",
+        "url": "https://github.com/omz/ColorSense-for-Xcode",
+        "description": "Xcode plugin that makes working with UIColor (and NSColor) more visual."
+      },
+      
+      {
+        "name": "VVDocumenter-Xcode",
+        "url": "https://github.com/onevcat/VVDocumenter-Xcode",
+        "description": "Xcode plug-in which helps you write Javadoc style documents easier.",
+        "screenshot": "https://raw.github.com/onevcat/VVDocumenter-Xcode/master/ScreenShot.gif"
+      }
+
+    ]
+  }
+}
