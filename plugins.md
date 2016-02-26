@@ -4,6 +4,8 @@
 ### 安装方法
 ```
 curl -fsSL https://raw.github.com/alcatraz/Alcatraz/master/Scripts/install.sh | sh
+
+# 重启Xcode
 ```
 
 ### 配置方法
@@ -18,11 +20,11 @@ curl -fsSL https://raw.github.com/alcatraz/Alcatraz/master/Scripts/install.sh | 
 
 第3步
 
-输入
+输入`asiainfomobile`自定义的插件列表
 `https://raw.githubusercontent.com/asiainfomobile/iOS-style-guide/master/assets/plugins.json`
 
 ## 一键代码格式化插件
-Xcode原生自带的格式化方法只有`ctrl＋i`调整缩进
+Xcode原生自带的格式化方法只有`CTRL＋I`调整缩进
 
 ### Objective-C 代码格式
 [BBUncrustifyPlugin](https://github.com/benoitsan/BBUncrustifyPlugin-Xcode)
@@ -37,13 +39,19 @@ git clone git@github.com:asiainfomobile/uncrustify.git ~/uncrustify
 
 ### Swift 代码格式
 
-[Swimat](https://github.com/Jintin/Swimat)更新非常频繁
+[Swimat](https://github.com/Jintin/Swimat)
 
 ![](https://github.com/Jintin/Swimat/raw/master/README/preview.gif)
 
 ### JS HMTL CSS JSON 代码格式
 
-https://github.com/bumaociyuan/JSFormatter-Xcode
+Xcode 自带的JS自动缩进比较难用，所以推荐使用[JSFormatter-Xcode](https://github.com/bumaociyuan/JSFormatter-Xcode)
+
+需要
+
+* [Node.js](https://nodejs.org/)
+* [js-beautify](https://github.com/beautify-web/js-beautify)
+
 ![](https://raw.githubusercontent.com/bumaociyuan/JSFormatter-Xcode/master/screenshot.gif)
 
 ### 绑定快捷键
