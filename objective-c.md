@@ -52,7 +52,7 @@ view.backgroundColor = [UIColor orangeColor];
 [UIApplication sharedApplication].delegate;
 ```
 
-**反对：**
+**不推荐：**
 ```objc
 [view setBackgroundColor:[UIColor orangeColor]];
 UIApplication.sharedApplication.delegate;
@@ -87,7 +87,7 @@ if (!error) {
 }
 ```
 
-**反对：**
+**不推荐：**
 ```objc
 if (!error)
     return success;
@@ -112,7 +112,7 @@ if (!error) return success;
 result = a > b ? x : y;
 ```
 
-**反对：**
+**不推荐：**
 ```objc
 result = a > b ? x = c > d ? c : d : y;
 ```
@@ -129,7 +129,7 @@ if (![self trySomethingWithError:&error]) {
 }
 ```
 
-**反对：**
+**不推荐：**
 ```objc
 NSError *error;
 [self trySomethingWithError:&error];
@@ -165,7 +165,7 @@ if (error) {
 @end
 ```
 
-**反对：**
+**不推荐：**
 
 ```objc
 @interface NYTSection : NSObject {
@@ -194,7 +194,7 @@ if (error) {
 UIButton *settingsButton;
 ```
 
-**反对：**
+**不推荐：**
 
 ```objc
 UIButton *setBut;
@@ -207,7 +207,7 @@ UIButton *setBut;
 static const NSTimeInterval NYTArticleViewControllerNavigationFadeAnimationDuration = 0.3;
 ```
 
-**反对：**
+**不推荐：**
 
 ```objc
 static const NSTimeInterval fadetime = 1.7;
@@ -224,7 +224,7 @@ static const NSTimeInterval fadetime = 1.7;
 @synthesize descriptiveVariableName = _descriptiveVariableName;
 ```
 
-**反对：**
+**不推荐：**
 
 ```objc
 id varnm;
@@ -256,7 +256,7 @@ NSNumber *shouldUseLiterals = @YES;
 NSNumber *buildingZIPCode = @10018;
 ```
 
-**反对：**
+**不推荐：**
 
 ```objc
 NSArray *names = [NSArray arrayWithObjects:@"Brian", @"Matt", @"Chris", @"Alex", @"Steve", @"Paul", nil];
@@ -277,7 +277,7 @@ static NSString * const NYTAboutViewControllerCompanyName = @"The New York Times
 static const CGFloat NYTImageThumbnailHeight = 50.0;
 ```
 
-**反对：**
+**不推荐：**
 
 ```objc
 #define CompanyName @"The New York Times Company"
@@ -316,7 +316,7 @@ typedef NS_OPTIONS(NSUInteger, NYTAdCategory) {
 
 ## 私有属性
 
-私有属性应该声明在类实现文件的延展（匿名的类目）中。
+私有属性应该声明在类实现文件的延展（匿名的类目）中。尽量使用`property`而不是成员变量
 
 **推荐：**
 
@@ -329,18 +329,6 @@ typedef NS_OPTIONS(NSUInteger, NYTAdCategory) {
 
 @end
 ```
-
-## 图片命名
-
-图片名称应该被统一命名以保持组织的完整。它们应该被命名为一个说明它们用途的驼峰式字符串，其次是自定义类或属性的无前缀名字（如果有的话），然后进一步说明颜色 和/或 展示位置，最后是它们的状态。
-
-**推荐：**
-
-* `RefreshBarButtonItem` / `RefreshBarButtonItem@2x` 和 `RefreshBarButtonItemSelected` / `RefreshBarButtonItemSelected@2x`
-* `ArticleNavigationBarWhite` / `ArticleNavigationBarWhite@2x` 和 `ArticleNavigationBarBlackSelected` / `ArticleNavigationBarBlackSelected@2x`.
-
-图片目录中被用于类似目的的图片应归入各自的组中。
-
 
 ## 布尔
 
@@ -355,7 +343,7 @@ if (!someObject) {
 }
 ```
 
-**反对：**
+**不推荐：**
 
 ```objc
 if (someObject == nil) {
@@ -371,7 +359,7 @@ if (isAwesome)
 if (![someObject boolValue])
 ```
 
-**反对：**
+**不推荐：**
 
 ```objc
 if ([someObject boolValue] == NO)
@@ -432,18 +420,4 @@ if (isAwesome == YES) // 永远别这么做
 [Import_1]: http://ashfurrow.com/blog/structuring-modern-objective-c
 [Import_2]: http://clang.llvm.org/docs/Modules.html#using-modules
 
-
-
-
-# 其他 Objective-C 风格指南
-
-如果感觉我们的不太符合你的口味，可以看看下面的风格指南：
-
-* [Google](http://google-styleguide.googlecode.com/svn/trunk/objcguide.xml)
-* [GitHub](https://github.com/github/objective-c-conventions)
-* [Adium](https://trac.adium.im/wiki/CodingStyle)
-* [Sam Soffes](https://gist.github.com/soffes/812796)
-* [CocoaDevCentral](http://cocoadevcentral.com/articles/000082.php)
-* [Luke Redpath](http://lukeredpath.co.uk/blog/my-objective-c-style-guide.html)
-* [Marcus Zarra](http://www.cimgf.com/zds-code-style-guide/)
 

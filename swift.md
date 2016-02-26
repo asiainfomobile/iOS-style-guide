@@ -33,9 +33,6 @@
 * [控制流](#控制流)
 * [分号](#分号)
 * [语言](#语言)
-* [Copyright Statement](#copyright-statement)
-* [Smiley Face](#smiley-face)
-* [Credits](#credits)
 
 
 ## 命名
