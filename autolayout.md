@@ -1,3 +1,9 @@
+## AutoLayout是什么？
+使用一句Apple的官方定义的话
+
+>AutoLayout是一种基于约束的，描述性的布局系统。 Auto Layout Is a Constraint-Based, Descriptive Layout System.
+
+
 ## 布局过程
 
 和 springs，struts 比起来，在视图被显示之前，自动布局引入了两个额外的步骤：更新约束 (updating constraints) 和布局视图 (laying out views)。每一步都是依赖前一步操作的；显示依赖于布局视图，布局视图依赖于更新约束。
@@ -34,6 +40,18 @@
 }
 ```
 
+## 动画
+
+Apple 官方文档
+
+```
+[containerView layoutIfNeeded]; // Ensures that all pending layout operations have been completed
+[UIView animateWithDuration:1.0 animations:^{
+     // Make all constraint changes here
+     [containerView layoutIfNeeded]; // Forces the layout of the subtree animation block and then captures all of the frame changes
+}];
+```
+
 ## 固有内容尺寸（Intrinsic Content Size ）
 固有内容尺寸是一个视图期望为其显示特定内容得到的大小。比如，`UILabel` 有一个基于字体的首选高度，一个基于字体和显示文本的首选宽度。`UIProgressView` 仅有一个基于其插图的首选高度，但没有首选宽度。一个没有格式的 `UIView` 既没有首选宽度也没有首选高度。
 
@@ -51,3 +69,37 @@ V:[label(>=30@750)]
 ```
 
 如果你不熟悉上面约束条件所使用的`Visual Format Language`，你可以到 [Apple](https://developer.apple.com/library/prerelease/ios/documentation/UserExperience/Conceptual/AutolayoutPG/VisualFormatLanguage.html) 文档 中了解。记住，这些额外的约束条件对了解自动布局的行为产生了隐式的帮助，同时也更好理解它的错误信息。
+
+快速理解 压缩阻力 (Compression Resistance) 和 内容吸附 (Content Hugging)
+
+* Content  Hugging => 内容不想被拉伸
+* Compression Resistance => 内容不想被压缩
+
+例如，这是一个button
+
+```
+[       Click Me      ]
+
+```
+
+拉伸superview
+
+如果 Hugging priority > 500，button就会像这样
+
+```
+[Click Me]
+```
+
+如果 Hugging priority < 500，button就会像这样
+```
+[       Click Me      ]
+```
+如果superview现在缩小
+如果 Compression Resistance priority > 500，button就会像这样
+```
+[Click Me]
+```
+如果 Compression Resistance priority < 500，button就会像这样
+```
+[Cli..]
+```

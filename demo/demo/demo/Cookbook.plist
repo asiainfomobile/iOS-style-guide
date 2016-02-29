@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Title</key>
+		<string>Simple Stack View</string>
+		<key>Identifier</key>
+		<string>SimpleStackView</string>
+		<key>Document</key>
+		<string>SimpleStackView.txt</string>
+	</dict>
+	<dict>
+		<key>Title</key>
+		<string>Nested Stack Views</string>
+		<key>Identifier</key>
+		<string>NestedStackViews</string>
+		<key>Document</key>
+		<string>NestedStackViews.txt</string>
+	</dict>
+</array>
+</plist>
