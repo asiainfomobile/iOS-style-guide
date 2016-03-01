@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8423AE441C8529B3009C68E4 /* ResizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8423AE431C8529B3009C68E4 /* ResizeViewController.swift */; };
+		8423AE461C8529D6009C68E4 /* ResizeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8423AE451C8529D6009C68E4 /* ResizeView.swift */; };
+		8423AE481C856926009C68E4 /* TimeLine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8423AE471C856926009C68E4 /* TimeLine.storyboard */; };
+		8423AE4A1C85696E009C68E4 /* TimeLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8423AE491C85696E009C68E4 /* TimeLineViewController.swift */; };
+		8423AE4C1C856F1E009C68E4 /* TimeLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8423AE4B1C856F1E009C68E4 /* TimeLineView.swift */; };
+		8423AE501C856F37009C68E4 /* TimeLineView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8423AE4F1C856F37009C68E4 /* TimeLineView.xib */; };
 		84595BE71C83D88000C0FD31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84595BE61C83D88000C0FD31 /* AppDelegate.swift */; };
 		84595BEC1C83D88000C0FD31 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84595BEA1C83D88000C0FD31 /* Main.storyboard */; };
 		84595BEE1C83D88000C0FD31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84595BED1C83D88000C0FD31 /* Assets.xcassets */; };
@@ -24,6 +30,12 @@
 
 /* Begin PBXFileReference section */
 		3BAA0ACD2E126AE2952BD1D6 /* Pods-demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-demo/Pods-demo.release.xcconfig"; sourceTree = "<group>"; };
+		8423AE431C8529B3009C68E4 /* ResizeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResizeViewController.swift; sourceTree = "<group>"; };
+		8423AE451C8529D6009C68E4 /* ResizeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResizeView.swift; sourceTree = "<group>"; };
+		8423AE471C856926009C68E4 /* TimeLine.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TimeLine.storyboard; sourceTree = "<group>"; };
+		8423AE491C85696E009C68E4 /* TimeLineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeLineViewController.swift; sourceTree = "<group>"; };
+		8423AE4B1C856F1E009C68E4 /* TimeLineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeLineView.swift; sourceTree = "<group>"; };
+		8423AE4F1C856F37009C68E4 /* TimeLineView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimeLineView.xib; sourceTree = "<group>"; };
 		84595BE31C83D88000C0FD31 /* demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84595BE61C83D88000C0FD31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84595BEB1C83D88000C0FD31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -122,6 +134,12 @@
 				84595BFA1C83E53600C0FD31 /* Linear.storyboard */,
 				84595C0E1C83E91800C0FD31 /* LinearLayoutViewController.swift */,
 				84595BFC1C83E53F00C0FD31 /* Resize.storyboard */,
+				8423AE431C8529B3009C68E4 /* ResizeViewController.swift */,
+				8423AE451C8529D6009C68E4 /* ResizeView.swift */,
+				8423AE471C856926009C68E4 /* TimeLine.storyboard */,
+				8423AE491C85696E009C68E4 /* TimeLineViewController.swift */,
+				8423AE4B1C856F1E009C68E4 /* TimeLineView.swift */,
+				8423AE4F1C856F37009C68E4 /* TimeLineView.xib */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -198,9 +216,11 @@
 				84595BF11C83D88000C0FD31 /* LaunchScreen.storyboard in Resources */,
 				84595BEE1C83D88000C0FD31 /* Assets.xcassets in Resources */,
 				84595BFD1C83E53F00C0FD31 /* Resize.storyboard in Resources */,
+				8423AE501C856F37009C68E4 /* TimeLineView.xib in Resources */,
 				84595C0C1C83E5FC00C0FD31 /* Cookbook.plist in Resources */,
 				84595BEC1C83D88000C0FD31 /* Main.storyboard in Resources */,
 				84595BFB1C83E53600C0FD31 /* Linear.storyboard in Resources */,
+				8423AE481C856926009C68E4 /* TimeLine.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,12 +279,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8423AE461C8529D6009C68E4 /* ResizeView.swift in Sources */,
 				84595C091C83E5D400C0FD31 /* Recipe+Storyboards.swift in Sources */,
 				84595C081C83E5D400C0FD31 /* Recipe+Loading.swift in Sources */,
 				84595C0A1C83E5D400C0FD31 /* Recipe.swift in Sources */,
 				84595BF91C83E4B800C0FD31 /* StoryboardIdentifier.swift in Sources */,
 				84595C0F1C83E91900C0FD31 /* LinearLayoutViewController.swift in Sources */,
 				84595BE71C83D88000C0FD31 /* AppDelegate.swift in Sources */,
+				8423AE441C8529B3009C68E4 /* ResizeViewController.swift in Sources */,
+				8423AE4A1C85696E009C68E4 /* TimeLineViewController.swift in Sources */,
+				8423AE4C1C856F1E009C68E4 /* TimeLineView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

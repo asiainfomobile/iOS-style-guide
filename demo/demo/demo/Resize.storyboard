@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Resize View Controller-->
         <scene sceneID="L7e-KM-a8N">
             <objects>
-                <viewController id="HPq-T3-EDi" sceneMemberID="viewController">
+                <viewController id="HPq-T3-EDi" customClass="ResizeViewController" customModule="demo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9XD-XB-0Wr"/>
                         <viewControllerLayoutGuide type="bottom" id="Mv9-hj-uai"/>

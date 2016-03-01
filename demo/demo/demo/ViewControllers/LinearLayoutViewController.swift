@@ -30,7 +30,6 @@ class LinearLayoutViewController: UIViewController {
 	}
 	
 	func addButtonClick() {
-//		let last = views.last!
 		let v = UIView()
 		v.backgroundColor = UIColor.redColor()
 		v.translatesAutoresizingMaskIntoConstraints = false
@@ -38,14 +37,6 @@ class LinearLayoutViewController: UIViewController {
 		views.append(v)
 		
 		v.layoutIfNeeded()
-//        self.lastConstraint.constraint.uninstall()
-//        v.snp_makeConstraints { (make) -> Void in
-//            make.width.equalTo(last)
-//            make.height.equalTo(last)
-//            make.centerY.equalTo(last)
-//            make.leading.equalTo(last.snp_trailing).offset(10)
-//            self.lastConstraint = make.trailing.equalTo(self.view).offset(-10)
-//        }
 		hasLoadedConstraints = false
 		UIView.animateWithDuration(1) { () -> Void in
 			self.view.setNeedsUpdateConstraints()
@@ -63,17 +54,20 @@ class LinearLayoutViewController: UIViewController {
 			var previousView = view
 			for i in 0 ..< views.count {
 				let v = views[i]
-				v.snp_updateConstraints(closure: { (make) -> Void in
+				v.snp_remakeConstraints(closure: { (make) -> Void in
 					if previousView != view {
+                        // not the first one
 						make.width.equalTo(previousView)
 						make.leading.equalTo(previousView.snp_trailing).offset(margin)
 					} else {
+                        // the first one
 						make.leading.equalTo(view).offset(margin)
-					}≤`
+					}
 					make.centerY.equalTo(previousView)
 					make.height.equalTo(100)
 					if i == views.count - 1 {
-						make.trailing.greaterThanOrEqualTo(view).offset(-margin)
+                        // the last one
+						make.trailing.equalTo(view).offset(-margin)
 					}
 				})
 				previousView = v

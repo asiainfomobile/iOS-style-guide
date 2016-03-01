@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="TimeLineView" customModule="demo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="gQJ-il-1Dd">
+                    <rect key="frame" x="270" y="8" width="60" height="60"/>
+                    <gestureRecognizers/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="1Af-Xb-bJ6" appends="YES" id="zHn-Rr-NKh"/>
+                    </connections>
+                </imageView>
+                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="INF-55-KV0">
+                    <rect key="frame" x="270" y="270" width="60" height="60"/>
+                    <gestureRecognizers/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="klQ-xl-3xF" appends="YES" id="JqK-aX-Y50"/>
+                    </connections>
+                </imageView>
+                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="mEF-Bq-kAX">
+                    <rect key="frame" x="270" y="532" width="60" height="60"/>
+                    <gestureRecognizers/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="lAy-w9-zoF" appends="YES" id="gIk-Hw-RiF"/>
+                    </connections>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="gQJ-il-1Dd" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="9wB-wd-OhN"/>
+                <constraint firstItem="mEF-Bq-kAX" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="BM7-fp-7WP"/>
+                <constraint firstItem="gQJ-il-1Dd" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="NHh-7G-c8F"/>
+                <constraint firstAttribute="bottom" secondItem="mEF-Bq-kAX" secondAttribute="bottom" constant="8" id="SHj-fQ-Lce"/>
+                <constraint firstItem="INF-55-KV0" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="eJO-oU-VzA"/>
+                <constraint firstItem="INF-55-KV0" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="oet-Tr-jlJ"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <connections>
+                <outlet property="bottomCenterXConstraint" destination="BM7-fp-7WP" id="TPi-Cn-e8y"/>
+                <outlet property="logo1" destination="gQJ-il-1Dd" id="4ZX-Cq-0Ga"/>
+                <outlet property="logo2" destination="INF-55-KV0" id="41k-yH-0M0"/>
+                <outlet property="logo3" destination="mEF-Bq-kAX" id="4OV-PQ-1ND"/>
+                <outlet property="middleCenterXConstraint" destination="oet-Tr-jlJ" id="vfJ-Kh-BgC"/>
+                <outlet property="topCenterXConstraint" destination="NHh-7G-c8F" id="xEF-Yi-P2W"/>
+            </connections>
+            <point key="canvasLocation" x="407" y="354"/>
+        </view>
+        <tapGestureRecognizer id="1Af-Xb-bJ6">
+            <connections>
+                <action selector="topTapped:" destination="iN0-l3-epB" id="3qp-ti-clq"/>
+            </connections>
+        </tapGestureRecognizer>
+        <tapGestureRecognizer id="klQ-xl-3xF">
+            <connections>
+                <action selector="middleTapped:" destination="iN0-l3-epB" id="J16-On-Vrk"/>
+            </connections>
+        </tapGestureRecognizer>
+        <tapGestureRecognizer id="lAy-w9-zoF">
+            <connections>
+                <action selector="bottomTapped:" destination="iN0-l3-epB" id="AdK-up-RzH"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+    <resources>
+        <image name="logo" width="60" height="60"/>
+    </resources>
+</document>
