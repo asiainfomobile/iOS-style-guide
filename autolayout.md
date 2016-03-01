@@ -20,7 +20,7 @@
 需要牢记的是，这三步并不是单向的。基于约束条件的布局是一个迭代的过程，布局操作可以基于之前的布局方案来对约束做出更改，而这将再次触发约束的更新，并紧接另一个布局操作。这可以被用来创建高级的自定义视图布局，但是如果你每一次调用的自定义 `layoutSubviews` 都会导致另一个布局操作的话，你将会陷入到无限循环的麻烦中去。
 
 
-比如，如果视图变得太窄的话，将原来排成一行的子视图转变成两行。
+例如，如果视图变得太窄的话，将原来排成一行的子视图转变成两行。
 
 ```
 - layoutSubviews
@@ -102,4 +102,36 @@ V:[label(>=30@750)]
 如果 Compression Resistance priority < 500，button就会像这样
 ```
 [Cli..]
+```
+
+几条tips
+* UIView 子类需要实现 intrinsicContentSize
+* UIView 子类不能对自己添加 size constraints
+* UIView 子类不能对自己的superview添加 constraints
+* updateConstraints 是用来更新约束
+
+绝对不要这么做
+```
+- (void)updateConstraints {
+  [self removeConstraints:self.constraints];
+  /*
+  create the constraint here
+  */
+  [super updateConstraints]; 
+}
+```
+因为`[self removeConstraints:self.constraints];`会删除`xib`和`storyboard`创造的`constraint`
+
+正确的应该是
+
+```
+- (void)updateConstraints {
+  if (!didSetConstraints) {
+     didSetConstraints = YES;
+  //create the constraint here
+  }
+  
+  //Update the constraints if needed
+  [super updateConstraints];
+}
 ```

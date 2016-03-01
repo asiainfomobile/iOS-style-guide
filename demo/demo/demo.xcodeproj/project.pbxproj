@@ -13,6 +13,9 @@
 		8423AE4A1C85696E009C68E4 /* TimeLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8423AE491C85696E009C68E4 /* TimeLineViewController.swift */; };
 		8423AE4C1C856F1E009C68E4 /* TimeLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8423AE4B1C856F1E009C68E4 /* TimeLineView.swift */; };
 		8423AE501C856F37009C68E4 /* TimeLineView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8423AE4F1C856F37009C68E4 /* TimeLineView.xib */; };
+		8423AE591C858D12009C68E4 /* TagListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8423AE581C858D12009C68E4 /* TagListViewController.swift */; };
+		8423AE5B1C858D1B009C68E4 /* TagList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8423AE5A1C858D1B009C68E4 /* TagList.storyboard */; };
+		8423AE5D1C858D51009C68E4 /* TagListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8423AE5C1C858D51009C68E4 /* TagListView.swift */; };
 		84595BE71C83D88000C0FD31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84595BE61C83D88000C0FD31 /* AppDelegate.swift */; };
 		84595BEC1C83D88000C0FD31 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84595BEA1C83D88000C0FD31 /* Main.storyboard */; };
 		84595BEE1C83D88000C0FD31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84595BED1C83D88000C0FD31 /* Assets.xcassets */; };
@@ -36,6 +39,9 @@
 		8423AE491C85696E009C68E4 /* TimeLineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeLineViewController.swift; sourceTree = "<group>"; };
 		8423AE4B1C856F1E009C68E4 /* TimeLineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeLineView.swift; sourceTree = "<group>"; };
 		8423AE4F1C856F37009C68E4 /* TimeLineView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimeLineView.xib; sourceTree = "<group>"; };
+		8423AE581C858D12009C68E4 /* TagListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagListViewController.swift; sourceTree = "<group>"; };
+		8423AE5A1C858D1B009C68E4 /* TagList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TagList.storyboard; sourceTree = "<group>"; };
+		8423AE5C1C858D51009C68E4 /* TagListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagListView.swift; sourceTree = "<group>"; };
 		84595BE31C83D88000C0FD31 /* demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84595BE61C83D88000C0FD31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84595BEB1C83D88000C0FD31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -140,6 +146,9 @@
 				8423AE491C85696E009C68E4 /* TimeLineViewController.swift */,
 				8423AE4B1C856F1E009C68E4 /* TimeLineView.swift */,
 				8423AE4F1C856F37009C68E4 /* TimeLineView.xib */,
+				8423AE581C858D12009C68E4 /* TagListViewController.swift */,
+				8423AE5A1C858D1B009C68E4 /* TagList.storyboard */,
+				8423AE5C1C858D51009C68E4 /* TagListView.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -216,6 +225,7 @@
 				84595BF11C83D88000C0FD31 /* LaunchScreen.storyboard in Resources */,
 				84595BEE1C83D88000C0FD31 /* Assets.xcassets in Resources */,
 				84595BFD1C83E53F00C0FD31 /* Resize.storyboard in Resources */,
+				8423AE5B1C858D1B009C68E4 /* TagList.storyboard in Resources */,
 				8423AE501C856F37009C68E4 /* TimeLineView.xib in Resources */,
 				84595C0C1C83E5FC00C0FD31 /* Cookbook.plist in Resources */,
 				84595BEC1C83D88000C0FD31 /* Main.storyboard in Resources */,
@@ -285,6 +295,8 @@
 				84595C0A1C83E5D400C0FD31 /* Recipe.swift in Sources */,
 				84595BF91C83E4B800C0FD31 /* StoryboardIdentifier.swift in Sources */,
 				84595C0F1C83E91900C0FD31 /* LinearLayoutViewController.swift in Sources */,
+				8423AE591C858D12009C68E4 /* TagListViewController.swift in Sources */,
+				8423AE5D1C858D51009C68E4 /* TagListView.swift in Sources */,
 				84595BE71C83D88000C0FD31 /* AppDelegate.swift in Sources */,
 				8423AE441C8529B3009C68E4 /* ResizeViewController.swift in Sources */,
 				8423AE4A1C85696E009C68E4 /* TimeLineViewController.swift in Sources */,

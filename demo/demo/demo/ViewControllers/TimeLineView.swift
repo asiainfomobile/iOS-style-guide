@@ -38,7 +38,7 @@ class TimeLineView: UIView {
 		let path2 = UIBezierPath()
 		path2.moveToPoint(point3)
 		path2.addLineToPoint(point4)
-        
+		
 		return path2.CGPath
 	}
 	
@@ -74,7 +74,7 @@ class TimeLineView: UIView {
 	func makeAnimationToNewPath(newPath: CGPath) -> CABasicAnimation {
 		let animation: CABasicAnimation = CABasicAnimation(keyPath: "path")
 		animation.duration = 0.25
-		animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
+		animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
 		animation.fillMode = kCAFillModeForwards
 		animation.removedOnCompletion = false
 		animation.toValue = newPath
@@ -82,24 +82,24 @@ class TimeLineView: UIView {
 	}
 	
 	@IBAction func topTapped(sender: AnyObject) {
+		topCenterXConstraint.constant = topCenterXConstraint.constant == 0 ? -100 : 0
 		UIView.animateWithDuration(0.25) { () -> Void in
-			self.topCenterXConstraint.constant = self.topCenterXConstraint.constant == 0 ? -100 : 0
 			self.layoutIfNeeded()
 			self.animationLines()
 		}
 	}
 	
 	@IBAction func middleTapped(sender: AnyObject) {
+		middleCenterXConstraint.constant = middleCenterXConstraint.constant == 0 ? -100 : 0
 		UIView.animateWithDuration(0.25) { () -> Void in
-			self.middleCenterXConstraint.constant = self.middleCenterXConstraint.constant == 0 ? -100 : 0
 			self.layoutIfNeeded()
 			self.animationLines()
 		}
 	}
 	
 	@IBAction func bottomTapped(sender: AnyObject) {
+		bottomCenterXConstraint.constant = bottomCenterXConstraint.constant == 0 ? -100 : 0
 		UIView.animateWithDuration(0.25) { () -> Void in
-			self.bottomCenterXConstraint.constant = self.bottomCenterXConstraint.constant == 0 ? -100 : 0
 			self.layoutIfNeeded()
 			self.animationLines()
 		}

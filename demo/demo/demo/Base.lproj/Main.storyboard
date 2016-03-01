@@ -76,6 +76,26 @@
                                             <segue destination="Sx0-Dr-MM5" kind="show" id="ipX-GG-dbW"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="xyZ-vs-7M4" style="IBUITableViewCellStyleDefault" id="kUJ-Gw-X1Y">
+                                        <rect key="frame" x="0.0" y="196" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kUJ-Gw-X1Y" id="aaU-XQ-Ynz">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Tag List" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xyZ-vs-7M4">
+                                                    <rect key="frame" x="15" y="0.0" width="570" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="wos-uF-9ax" kind="show" id="2ea-ky-lGG"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -96,7 +116,7 @@
                 <viewControllerPlaceholder storyboardName="Linear" id="VbF-9D-lzR" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WaZ-QD-0N5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1470" y="-109"/>
+            <point key="canvasLocation" x="1386" y="-160"/>
         </scene>
         <!--Resize-->
         <scene sceneID="6O1-nb-TiY">
@@ -104,7 +124,7 @@
                 <viewControllerPlaceholder storyboardName="Resize" id="jUz-Mz-Bq0" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HkQ-gD-4X4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1471" y="198"/>
+            <point key="canvasLocation" x="1387" y="-115"/>
         </scene>
         <!--TimeLine-->
         <scene sceneID="YHs-xW-1fz">
@@ -112,7 +132,7 @@
                 <viewControllerPlaceholder storyboardName="TimeLine" id="Sx0-Dr-MM5" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CcE-SC-3ac" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1487" y="303"/>
+            <point key="canvasLocation" x="1395" y="-72"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ZaK-OK-aww">
@@ -131,6 +151,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7wk-cM-cxj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="106" y="59"/>
+        </scene>
+        <!--TagList-->
+        <scene sceneID="eAz-nX-n52">
+            <objects>
+                <viewControllerPlaceholder storyboardName="TagList" id="wos-uF-9ax" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Djn-eg-sxT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1395" y="-18"/>
         </scene>
     </scenes>
 </document>
