@@ -21,9 +21,7 @@ class DetailTextView: UIView {
 			button.setTitle(expand ? "Hide More" : "Show More", forState: .Normal)
 			greaterOrEqualToMinConstraint.priority = expand ? 999 : UILayoutPriorityDefaultLow
 			lessOrEqualToMinConstraint.priority = expand ? UILayoutPriorityDefaultLow : 999
-			UIView.animateWithDuration(1) { () -> Void in
-				self.layoutIfNeeded()
-			}
+			self.layoutIfNeeded()
 		}
 	}
 	
