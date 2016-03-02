@@ -20,7 +20,6 @@
 		84595BFB1C83E53600C0FD31 /* Linear.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84595BFA1C83E53600C0FD31 /* Linear.storyboard */; };
 		84595BFD1C83E53F00C0FD31 /* Resize.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84595BFC1C83E53F00C0FD31 /* Resize.storyboard */; };
 		84595C0F1C83E91900C0FD31 /* LinearLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84595C0E1C83E91800C0FD31 /* LinearLayoutViewController.swift */; };
-		845D04861C86855F0035D149 /* ResizeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D04821C86855F0035D149 /* ResizeView.swift */; };
 		845D04871C86855F0035D149 /* TagListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D04831C86855F0035D149 /* TagListView.swift */; };
 		845D04881C86855F0035D149 /* TimeLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D04841C86855F0035D149 /* TimeLineView.swift */; };
 		845D04891C86855F0035D149 /* TimeLineView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 845D04851C86855F0035D149 /* TimeLineView.xib */; };
@@ -44,7 +43,6 @@
 		84595BFA1C83E53600C0FD31 /* Linear.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Linear.storyboard; path = ../Linear.storyboard; sourceTree = "<group>"; };
 		84595BFC1C83E53F00C0FD31 /* Resize.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Resize.storyboard; path = ../Resize.storyboard; sourceTree = "<group>"; };
 		84595C0E1C83E91800C0FD31 /* LinearLayoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinearLayoutViewController.swift; sourceTree = "<group>"; };
-		845D04821C86855F0035D149 /* ResizeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResizeView.swift; sourceTree = "<group>"; };
 		845D04831C86855F0035D149 /* TagListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagListView.swift; sourceTree = "<group>"; };
 		845D04841C86855F0035D149 /* TimeLineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeLineView.swift; sourceTree = "<group>"; };
 		845D04851C86855F0035D149 /* TimeLineView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimeLineView.xib; sourceTree = "<group>"; };
@@ -141,7 +139,6 @@
 			isa = PBXGroup;
 			children = (
 				845D04831C86855F0035D149 /* TagListView.swift */,
-				845D04821C86855F0035D149 /* ResizeView.swift */,
 				845D04841C86855F0035D149 /* TimeLineView.swift */,
 				845D04851C86855F0035D149 /* TimeLineView.xib */,
 			);
@@ -276,7 +273,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				845D04861C86855F0035D149 /* ResizeView.swift in Sources */,
 				84595BF91C83E4B800C0FD31 /* StoryboardIdentifier.swift in Sources */,
 				84595C0F1C83E91900C0FD31 /* LinearLayoutViewController.swift in Sources */,
 				8423AE591C858D12009C68E4 /* TagListViewController.swift in Sources */,

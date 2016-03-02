@@ -22,19 +22,11 @@ class ResizeViewController: UIViewController {
 	}
     
     func setupResizeViews() {
-//        let resizeView1 = ResizeView()
-//        view.addSubview(resizeView1)
-//        
-//        let resizeView2 = ResizeView()
-//        view.addSubview(resizeView2)
+        
+
     }
 	
 	override func updateViewConstraints() {
 		super.updateViewConstraints()
-	}
-}
-
-extension ResizeViewController: ResizeViewDelegate {
-	func resizeView(resizeView: ResizeView, didClickAtIndex index: Int) {
 	}
 }

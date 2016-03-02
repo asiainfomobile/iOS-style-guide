@@ -15,6 +15,7 @@ class TagListView: UIView {
 			renderTags()
 		}
 	}
+    
 	var labels = [UILabel]()
 	var indexOfFirstLabelInOneLine = [Int]()
 	var margin: CGFloat = 10
@@ -46,6 +47,8 @@ class TagListView: UIView {
 			addSubview(label)
 			labels.append(label)
 		}
+        setNeedsUpdateConstraints()
+        setNeedsLayout()
 	}
 	
 	override func layoutSubviews() {
@@ -61,7 +64,7 @@ class TagListView: UIView {
 			}
 		}
 	}
-	
+    
 	override func updateConstraints() {
 		var previousView: UIView! = self
 		for label in labels {
@@ -87,8 +90,6 @@ class TagListView: UIView {
 					// the last label
 					make.bottom.equalTo(self).offset(-lineSpacing)
 				}
-				
-//				make.trailing.lessThanOrEqualTo(self).offset(-margin).priorityHigh()
 			})
 			
 			previousView = label
