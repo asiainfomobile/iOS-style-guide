@@ -13,9 +13,25 @@ class TimeLineView: UIView {
 	@IBOutlet weak var logo2: UIImageView!
 	@IBOutlet weak var logo3: UIImageView!
 	
+	@IBOutlet weak var label1: UILabel!
+	@IBOutlet weak var label2: UILabel!
+	@IBOutlet weak var label3: UILabel!
+	
 	@IBOutlet weak var topCenterXConstraint: NSLayoutConstraint!
 	@IBOutlet weak var middleCenterXConstraint: NSLayoutConstraint!
 	@IBOutlet weak var bottomCenterXConstraint: NSLayoutConstraint!
+	
+	var isTopLogoAtLeft: Bool {
+		return topCenterXConstraint.constant == -100
+	}
+	
+	var isMiddleLogoAtLeft: Bool {
+		return middleCenterXConstraint.constant == -100
+	}
+	
+	var isBottomLogoAtLeft: Bool {
+		return bottomCenterXConstraint.constant == -100
+	}
 	
 	var line1: CAShapeLayer!
 	var line2: CAShapeLayer!
@@ -82,24 +98,27 @@ class TimeLineView: UIView {
 	}
 	
 	@IBAction func topTapped(sender: AnyObject) {
-		topCenterXConstraint.constant = topCenterXConstraint.constant == 0 ? -100 : 0
+		topCenterXConstraint.constant = isTopLogoAtLeft ? 0 : -100
 		UIView.animateWithDuration(0.25) { () -> Void in
+            self.label1.alpha = self.isTopLogoAtLeft ? 1 : 0
 			self.layoutIfNeeded()
 			self.animationLines()
 		}
 	}
 	
 	@IBAction func middleTapped(sender: AnyObject) {
-		middleCenterXConstraint.constant = middleCenterXConstraint.constant == 0 ? -100 : 0
+		middleCenterXConstraint.constant = isMiddleLogoAtLeft ? 0 : -100
 		UIView.animateWithDuration(0.25) { () -> Void in
+            self.label2.alpha = self.isMiddleLogoAtLeft ? 1 : 0
 			self.layoutIfNeeded()
 			self.animationLines()
 		}
 	}
 	
 	@IBAction func bottomTapped(sender: AnyObject) {
-		bottomCenterXConstraint.constant = bottomCenterXConstraint.constant == 0 ? -100 : 0
+		bottomCenterXConstraint.constant = isBottomLogoAtLeft ? 0 : -100
 		UIView.animateWithDuration(0.25) { () -> Void in
+            self.label3.alpha = self.isBottomLogoAtLeft ? 1 : 0
 			self.layoutIfNeeded()
 			self.animationLines()
 		}

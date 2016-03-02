@@ -32,19 +32,46 @@
                         <outletCollection property="gestureRecognizers" destination="lAy-w9-zoF" appends="YES" id="gIk-Hw-RiF"/>
                     </connections>
                 </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Very long text Very long text Very long text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="38O-CE-GPx">
+                    <rect key="frame" x="338" y="27" width="325" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Very long text Very long text Very long text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b41-2B-qcx">
+                    <rect key="frame" x="338" y="289" width="325" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Very long text Very long text Very long text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6UQ-RF-JYr">
+                    <rect key="frame" x="338" y="551" width="325" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="gQJ-il-1Dd" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="9wB-wd-OhN"/>
                 <constraint firstItem="mEF-Bq-kAX" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="BM7-fp-7WP"/>
+                <constraint firstItem="b41-2B-qcx" firstAttribute="leading" secondItem="INF-55-KV0" secondAttribute="trailing" constant="8" id="FSG-4G-FWO"/>
+                <constraint firstItem="38O-CE-GPx" firstAttribute="centerY" secondItem="gQJ-il-1Dd" secondAttribute="centerY" id="Lp8-Wb-0IX"/>
                 <constraint firstItem="gQJ-il-1Dd" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="NHh-7G-c8F"/>
                 <constraint firstAttribute="bottom" secondItem="mEF-Bq-kAX" secondAttribute="bottom" constant="8" id="SHj-fQ-Lce"/>
+                <constraint firstItem="b41-2B-qcx" firstAttribute="centerY" secondItem="INF-55-KV0" secondAttribute="centerY" id="ThB-3J-hXx"/>
+                <constraint firstItem="6UQ-RF-JYr" firstAttribute="leading" secondItem="mEF-Bq-kAX" secondAttribute="trailing" constant="8" id="bNY-py-bIm"/>
                 <constraint firstItem="INF-55-KV0" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="eJO-oU-VzA"/>
                 <constraint firstItem="INF-55-KV0" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="oet-Tr-jlJ"/>
+                <constraint firstItem="38O-CE-GPx" firstAttribute="leading" secondItem="gQJ-il-1Dd" secondAttribute="trailing" constant="8" id="oqc-l9-l5E"/>
+                <constraint firstItem="6UQ-RF-JYr" firstAttribute="centerY" secondItem="mEF-Bq-kAX" secondAttribute="centerY" id="yme-ow-0yB"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <connections>
                 <outlet property="bottomCenterXConstraint" destination="BM7-fp-7WP" id="TPi-Cn-e8y"/>
+                <outlet property="label1" destination="38O-CE-GPx" id="V3Z-77-jEf"/>
+                <outlet property="label2" destination="b41-2B-qcx" id="bZr-1t-87I"/>
+                <outlet property="label3" destination="6UQ-RF-JYr" id="KgS-YE-b95"/>
                 <outlet property="logo1" destination="gQJ-il-1Dd" id="4ZX-Cq-0Ga"/>
                 <outlet property="logo2" destination="INF-55-KV0" id="41k-yH-0M0"/>
                 <outlet property="logo3" destination="mEF-Bq-kAX" id="4OV-PQ-1ND"/>

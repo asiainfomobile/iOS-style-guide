@@ -23,6 +23,9 @@ class TagListView: UIView {
 	
 	init(tags: [String]) {
 		super.init(frame: .zero)
+        // didSet not call in init func
+        // http://stackoverflow.com/questions/25230780/is-it-possible-to-allow-didset-to-be-called-during-initialization-in-swift
+        // willSet and didSet observers are not called when a property is first initialized. They are only called when the property’s value is set outside of an initialization context.
 		self.tags = tags
 	}
 	

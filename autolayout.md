@@ -22,6 +22,8 @@
 
 例如，如果视图变得太窄的话，将原来排成一行的子视图转变成两行。
 
+见[Demo:TagListView](https://github.com/asiainfomobile/iOS-style-guide/blob/master/demo/demo/demo/Views/TagListView.swift#L54)
+
 ```
 - layoutSubviews
 {
@@ -29,7 +31,8 @@
     if (self.subviews[0].frame.size.width <= MINIMUM_WIDTH)
     {
         [self removeSubviewConstraints];
-        self.layoutRows += 1; [super layoutSubviews];
+        self.layoutRows += 1; 
+        [super layoutSubviews];
     }
 }
 
