@@ -13,11 +13,10 @@ class LinearLayoutViewController: UIViewController {
 	
 	var views = [UIView]()
 	var hasLoadedConstraints = false
-	var lastConstraint: ConstraintDescriptionEditable!
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		for _ in 0 ..< 5 {
+		for _ in 0 ..< 2 {
 			let v = UIView()
 			v.backgroundColor = UIColor.redColor()
 			v.translatesAutoresizingMaskIntoConstraints = false
@@ -57,18 +56,15 @@ class LinearLayoutViewController: UIViewController {
 				v.snp_remakeConstraints(closure: { (make) -> Void in
 					if previousView != view {
                         // not the first one
-						make.width.equalTo(previousView)
-						make.leading.equalTo(previousView.snp_trailing).offset(margin)
+						make.top.equalTo(previousView.snp_bottom).offset(margin)
 					} else {
                         // the first one
-						make.leading.equalTo(view).offset(margin)
+						make.top.equalTo(view).offset(80)
 					}
-					make.centerY.equalTo(previousView)
-					make.height.equalTo(100)
-					if i == views.count - 1 {
-                        // the last one
-						make.trailing.equalTo(view).offset(-margin)
-					}
+					make.centerX.equalTo(previousView)
+					make.width.equalTo(100)
+                    make.height.equalTo(100)
+
 				})
 				previousView = v
 			}

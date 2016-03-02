@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Resize View Controller-->
@@ -18,32 +17,64 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="128" translatesAutoresizingMaskIntoConstraints="NO" id="ZdF-WG-Wig" customClass="TagListView" customModule="demo" customModuleProvider="target">
-                                <rect key="frame" x="20" y="452" width="560" height="128"/>
-                                <color key="backgroundColor" red="0.76351555369923574" green="0.83749059434605311" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="128" translatesAutoresizingMaskIntoConstraints="NO" id="Zud-nh-VV2" customClass="DetailTextView" customModule="demo" customModuleProvider="target">
-                                <rect key="frame" x="20" y="316" width="560" height="128"/>
-                                <color key="backgroundColor" red="0.94279724275687571" green="1" blue="0.72722991080909627" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2kI-FP-i8v">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FKo-sH-GBL">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="292"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="128" translatesAutoresizingMaskIntoConstraints="NO" id="ZdF-WG-Wig" customClass="TagListView" customModule="demo" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="144" width="560" height="128"/>
+                                                <color key="backgroundColor" red="0.76351555369923574" green="0.83749059434605311" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="128" translatesAutoresizingMaskIntoConstraints="NO" id="Zud-nh-VV2" customClass="DetailTextView" customModule="demo" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="8" width="560" height="128"/>
+                                                <color key="backgroundColor" red="0.94279724275687571" green="1" blue="0.72722991080909627" alpha="1" colorSpace="calibratedRGB"/>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="Zud-nh-VV2" firstAttribute="leading" secondItem="FKo-sH-GBL" secondAttribute="leading" constant="20" id="6TD-E3-SaY"/>
+                                            <constraint firstAttribute="trailing" secondItem="Zud-nh-VV2" secondAttribute="trailing" constant="20" id="70u-wA-xie"/>
+                                            <constraint firstAttribute="trailing" secondItem="ZdF-WG-Wig" secondAttribute="trailing" constant="20" id="EcU-7m-n3Y"/>
+                                            <constraint firstItem="ZdF-WG-Wig" firstAttribute="leading" secondItem="FKo-sH-GBL" secondAttribute="leading" constant="20" id="RVY-i4-qCh"/>
+                                            <constraint firstAttribute="bottom" secondItem="ZdF-WG-Wig" secondAttribute="bottom" constant="20" symbolic="YES" id="aC5-6O-IuM"/>
+                                            <constraint firstItem="Zud-nh-VV2" firstAttribute="top" secondItem="FKo-sH-GBL" secondAttribute="top" constant="8" id="bn8-ix-PES"/>
+                                            <constraint firstItem="ZdF-WG-Wig" firstAttribute="top" secondItem="Zud-nh-VV2" secondAttribute="bottom" constant="8" id="ese-3R-Uol"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="FKo-sH-GBL" firstAttribute="top" secondItem="2kI-FP-i8v" secondAttribute="top" id="bkA-gM-8jL"/>
+                                    <constraint firstAttribute="trailing" secondItem="FKo-sH-GBL" secondAttribute="trailing" id="iM2-r4-KAG"/>
+                                    <constraint firstItem="FKo-sH-GBL" firstAttribute="leading" secondItem="2kI-FP-i8v" secondAttribute="leading" id="lz2-Yr-YYa"/>
+                                    <constraint firstAttribute="bottom" secondItem="FKo-sH-GBL" secondAttribute="bottom" id="uJ2-4i-ig5"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="leadingMargin" secondItem="Zud-nh-VV2" secondAttribute="leading" id="0Fz-JG-4mR"/>
-                            <constraint firstItem="ZdF-WG-Wig" firstAttribute="top" secondItem="Zud-nh-VV2" secondAttribute="bottom" constant="8" id="Law-El-eXZ"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="ZdF-WG-Wig" secondAttribute="trailing" id="Lwm-gi-DSq"/>
-                            <constraint firstItem="ZdF-WG-Wig" firstAttribute="centerX" secondItem="Gar-8z-IPa" secondAttribute="centerX" id="Pa6-4f-emW"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Zud-nh-VV2" secondAttribute="trailing" id="QpI-5U-4dw"/>
-                            <constraint firstItem="Mv9-hj-uai" firstAttribute="top" secondItem="ZdF-WG-Wig" secondAttribute="bottom" constant="20" id="t4g-Nx-pAn"/>
+                            <constraint firstItem="2kI-FP-i8v" firstAttribute="leading" secondItem="Gar-8z-IPa" secondAttribute="leading" id="4YN-iS-1Wl"/>
+                            <constraint firstItem="Mv9-hj-uai" firstAttribute="top" secondItem="2kI-FP-i8v" secondAttribute="bottom" id="SOf-Yw-pnL"/>
+                            <constraint firstItem="FKo-sH-GBL" firstAttribute="height" secondItem="Gar-8z-IPa" secondAttribute="height" id="Zzf-SK-MHF"/>
+                            <constraint firstAttribute="trailing" secondItem="2kI-FP-i8v" secondAttribute="trailing" id="qn4-5g-VeL"/>
+                            <constraint firstItem="2kI-FP-i8v" firstAttribute="top" secondItem="9XD-XB-0Wr" secondAttribute="bottom" id="tes-gt-BAj"/>
+                            <constraint firstItem="FKo-sH-GBL" firstAttribute="width" secondItem="Gar-8z-IPa" secondAttribute="width" id="yH4-63-ONy"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Zzf-SK-MHF"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
+                        <outlet property="detailTextView" destination="Zud-nh-VV2" id="esd-lj-hVj"/>
                         <outlet property="tagListView" destination="ZdF-WG-Wig" id="xEi-LI-8JW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Efc-10-uiE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="88" y="474"/>
+            <point key="canvasLocation" x="312" y="400"/>
         </scene>
     </scenes>
 </document>

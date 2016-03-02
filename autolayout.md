@@ -3,6 +3,11 @@
 
 >AutoLayout是一种基于约束的，描述性的布局系统。 Auto Layout Is a Constraint-Based, Descriptive Layout System.
 
+每一个Constraint 都是一个表达式,Apple的官方文档定义
+> firstItem.firstAttribute {==,<=,>=} secondItem.secondAttribute * multiplier + constant
+> If your equation does not have a second view and attribute, use nil and NSLayoutAttributeNotAnAttribute.
+> Constraint satisfaction is not all or nothing.  If a constraint 'a == b' is optional, that means we will attempt to minimize 'abs(a-b)'.
+
 
 ## 布局过程
 
@@ -55,10 +60,14 @@ Apple 官方文档
 }];
 ```
 
-## 固有内容尺寸（Intrinsic Content Size ）
-固有内容尺寸是一个视图期望为其显示特定内容得到的大小。比如，`UILabel` 有一个基于字体的首选高度，一个基于字体和显示文本的首选宽度。`UIProgressView` 仅有一个基于其插图的首选高度，但没有首选宽度。一个没有格式的 `UIView` 既没有首选宽度也没有首选高度。
+## Priority
+`public typealias UILayoutPriority = Float`
 
-为了在自定义视图中实现固有内容尺寸，你需要做两件事：重写 `intrinsicContentSize` 为内容返回恰当的大小，无论何时有任何会影响固有内容尺寸的改变发生时，调用 `invalidateIntrinsicContentSize`。如果这个视图只有一个方向的尺寸设置了固有尺寸，那么为另一个方向的尺寸返回 `UIViewNoIntrinsicMetric` / `NSViewNoIntrinsicMetric`。
+* UILayoutPriorityRequired 			1000
+* UILayoutPriorityDefaultHigh			750 // button 的内容抗拒压缩的优先级
+* UILayoutPriorityDefaultLow 			250 // button 的内容抗拒水平方向拉伸的优先级
+
+
 
 ## 压缩阻力 (Compression Resistance) 和 内容吸附 (Content Hugging)
 
@@ -136,5 +145,23 @@ V:[label(>=30@750)]
   
   //Update the constraints if needed
   [super updateConstraints];
+}
+```
+
+## 固有内容尺寸（Intrinsic Content Size ）
+固有内容尺寸是一个视图期望为其显示特定内容得到的大小。比如，`UILabel` 有一个基于字体的首选高度，一个基于字体和显示文本的首选宽度。`UIProgressView` 仅有一个基于其插图的首选高度，但没有首选宽度。一个没有格式的 `UIView` 既没有首选宽度也没有首选高度。
+
+为了在自定义视图中实现固有内容尺寸，你需要做两件事：重写 `intrinsicContentSize` 为内容返回恰当的大小，无论何时有任何会影响固有内容尺寸的改变发生时，调用 `invalidateIntrinsicContentSize`。如果这个视图只有一个方向的尺寸设置了固有尺寸，那么为另一个方向的尺寸返回 `UIViewNoIntrinsicMetric` / `NSViewNoIntrinsicMetric`。
+
+
+## Debug
+
+```
+extension NSLayoutConstraint {
+    /* For ease in debugging, name a constraint by setting its identifier, which will be printed in the constraint's description.
+     Identifiers starting with UI and NS are reserved by the system.
+     */
+    @available(iOS 7.0, *)
+    public var identifier: String?
 }
 ```

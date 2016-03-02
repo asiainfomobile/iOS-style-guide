@@ -371,6 +371,18 @@ if (isAwesome == YES) // 永远别这么做
 @property (assign, getter=isEditable) BOOL editable;
 ```
 
+```swift
+	var _editable: Bool = false
+	var editable: Bool {
+        @objc(isEditable) get {
+				return _editable
+        }
+        set {
+        		_editable = newValue
+        }
+	}
+```
+
 内容和例子来自 [Cocoa 命名指南][Booleans_1] 。
 
 [Booleans_1]:https://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/CodingGuidelines/Articles/NamingIvarsAndTypes.html#//apple_ref/doc/uid/20001284-BAJGIIJE

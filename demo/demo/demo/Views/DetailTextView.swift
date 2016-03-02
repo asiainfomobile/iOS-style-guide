@@ -16,12 +16,35 @@ class DetailTextView: UIView {
 	@IBOutlet weak var lessOrEqualToMinConstraint: NSLayoutConstraint!
 	@IBOutlet weak var greaterOrEqualToMinConstraint: NSLayoutConstraint!
 	
+	@IBOutlet weak var constraintBetweenLabelAndSelf: NSLayoutConstraint!
+	var text: String? = nil {
+		didSet {
+			label.text = text
+			layoutIfNeeded()
+		}
+	}
+	
 	var expand: Bool = false {
 		didSet {
 			button.setTitle(expand ? "Hide More" : "Show More", forState: .Normal)
 			greaterOrEqualToMinConstraint.priority = expand ? 999 : UILayoutPriorityDefaultLow
 			lessOrEqualToMinConstraint.priority = expand ? UILayoutPriorityDefaultLow : 999
-			self.layoutIfNeeded()
+			layoutIfNeeded()
+		}
+	}
+	
+	var hideMoreButton: Bool = false {
+		willSet {
+			if hideMoreButton != newValue {
+				if newValue {
+					constraintBetweenLabelAndSelf.priority = 999
+					button.hidden = true
+				} else {
+					constraintBetweenLabelAndSelf.priority = UILayoutPriorityDefaultLow
+					button.hidden = false
+				}
+				layoutIfNeeded()
+			}
 		}
 	}
 	
@@ -44,11 +67,12 @@ class DetailTextView: UIView {
 	}
 	
 	override func layoutSubviews() {
+		
 		super.layoutSubviews()
 		if CGRectGetHeight(label.frame) < 73 {
-			button.hidden = true
+			hideMoreButton = true
 		} else {
-			button.hidden = false
+			hideMoreButton = false
 		}
 	}
 	

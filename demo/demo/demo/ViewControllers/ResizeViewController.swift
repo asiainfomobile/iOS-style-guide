@@ -10,6 +10,7 @@ import UIKit
 
 class ResizeViewController: UIViewController {
 	var scrollView: UIScrollView!
+	@IBOutlet weak var detailTextView: DetailTextView!
 	@IBOutlet weak var tagListView: TagListView!
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -19,9 +20,15 @@ class ResizeViewController: UIViewController {
 	}
 	
 	func setupBarButtonItem() {
-		let barButtonItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "addTag")
-		navigationItem.rightBarButtonItem = barButtonItem
+		let addBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "addTag")
+		let changeTextBarButtonItem = UIBarButtonItem(title: "Change DetailTextView Text", style: .Done, target: self, action: "changeText")
+		navigationItem.rightBarButtonItems = [addBarButtonItem, changeTextBarButtonItem]
 	}
+	
+	func changeText() {
+		detailTextView.text = "fdafdsaf"
+	}
+	
 	func addTag() {
 		
 		let randomNumber = random() % 20

@@ -8,6 +8,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailTextView" customModule="demo" customModuleProvider="target">
             <connections>
                 <outlet property="button" destination="2eb-Q9-tyg" id="vIe-zo-NFV"/>
+                <outlet property="constraintBetweenLabelAndSelf" destination="G8S-eF-EGu" id="CxQ-0m-bIc"/>
                 <outlet property="greaterOrEqualToMinConstraint" destination="Ru8-p8-BU5" id="D5b-MB-sGh"/>
                 <outlet property="label" destination="wDH-ge-WTX" id="Q1z-Xe-s6i"/>
                 <outlet property="lessOrEqualToMinConstraint" destination="UlH-H1-t4c" id="2Yz-0h-IUP"/>
@@ -44,10 +45,11 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="wDH-ge-WTX" secondAttribute="trailing" constant="8" id="6vj-nM-0il"/>
-                <constraint firstAttribute="bottom" secondItem="2eb-Q9-tyg" secondAttribute="bottom" constant="8" id="8ef-RZ-LNa"/>
+                <constraint firstAttribute="bottom" secondItem="2eb-Q9-tyg" secondAttribute="bottom" priority="750" constant="8" id="8ef-RZ-LNa"/>
                 <constraint firstAttribute="trailing" secondItem="2eb-Q9-tyg" secondAttribute="trailing" constant="8" id="Blh-WG-VDf"/>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="wDH-ge-WTX" secondAttribute="bottom" priority="250" constant="20" symbolic="YES" id="G8S-eF-EGu"/>
                 <constraint firstItem="wDH-ge-WTX" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="MFu-21-6x4"/>
-                <constraint firstItem="2eb-Q9-tyg" firstAttribute="top" secondItem="wDH-ge-WTX" secondAttribute="bottom" constant="8" id="PUw-mA-bVp"/>
+                <constraint firstItem="2eb-Q9-tyg" firstAttribute="top" secondItem="wDH-ge-WTX" secondAttribute="bottom" priority="750" constant="8" id="PUw-mA-bVp"/>
                 <constraint firstItem="wDH-ge-WTX" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="leA-Xq-0b8"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
