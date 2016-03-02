@@ -23,6 +23,8 @@
 		845D04871C86855F0035D149 /* TagListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D04831C86855F0035D149 /* TagListView.swift */; };
 		845D04881C86855F0035D149 /* TimeLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D04841C86855F0035D149 /* TimeLineView.swift */; };
 		845D04891C86855F0035D149 /* TimeLineView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 845D04851C86855F0035D149 /* TimeLineView.xib */; };
+		845D048B1C86BE020035D149 /* DetailTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D048A1C86BE020035D149 /* DetailTextView.swift */; };
+		845D048D1C86BE0E0035D149 /* DetailTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 845D048C1C86BE0E0035D149 /* DetailTextView.xib */; };
 		CA8573718802D227DBCE2609 /* Pods_demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C37271A008BE8213D0E274D4 /* Pods_demo.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +48,8 @@
 		845D04831C86855F0035D149 /* TagListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagListView.swift; sourceTree = "<group>"; };
 		845D04841C86855F0035D149 /* TimeLineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeLineView.swift; sourceTree = "<group>"; };
 		845D04851C86855F0035D149 /* TimeLineView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimeLineView.xib; sourceTree = "<group>"; };
+		845D048A1C86BE020035D149 /* DetailTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailTextView.swift; sourceTree = "<group>"; };
+		845D048C1C86BE0E0035D149 /* DetailTextView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailTextView.xib; sourceTree = "<group>"; };
 		AB159F892C577982EA909520 /* Pods-demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-demo/Pods-demo.debug.xcconfig"; sourceTree = "<group>"; };
 		C37271A008BE8213D0E274D4 /* Pods_demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -141,6 +145,8 @@
 				845D04831C86855F0035D149 /* TagListView.swift */,
 				845D04841C86855F0035D149 /* TimeLineView.swift */,
 				845D04851C86855F0035D149 /* TimeLineView.xib */,
+				845D048A1C86BE020035D149 /* DetailTextView.swift */,
+				845D048C1C86BE0E0035D149 /* DetailTextView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -212,6 +218,7 @@
 				84595BEE1C83D88000C0FD31 /* Assets.xcassets in Resources */,
 				84595BFD1C83E53F00C0FD31 /* Resize.storyboard in Resources */,
 				8423AE5B1C858D1B009C68E4 /* TagList.storyboard in Resources */,
+				845D048D1C86BE0E0035D149 /* DetailTextView.xib in Resources */,
 				84595BEC1C83D88000C0FD31 /* Main.storyboard in Resources */,
 				84595BFB1C83E53600C0FD31 /* Linear.storyboard in Resources */,
 				8423AE481C856926009C68E4 /* TimeLine.storyboard in Resources */,
@@ -274,6 +281,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84595BF91C83E4B800C0FD31 /* StoryboardIdentifier.swift in Sources */,
+				845D048B1C86BE020035D149 /* DetailTextView.swift in Sources */,
 				84595C0F1C83E91900C0FD31 /* LinearLayoutViewController.swift in Sources */,
 				8423AE591C858D12009C68E4 /* TagListViewController.swift in Sources */,
 				845D04881C86855F0035D149 /* TimeLineView.swift in Sources */,

@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Resize View Controller-->
@@ -17,15 +18,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="resize" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XI8-Qf-XXk">
-                                <rect key="frame" x="6" y="68" width="46" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="128" translatesAutoresizingMaskIntoConstraints="NO" id="ZdF-WG-Wig" customClass="TagListView" customModule="demo" customModuleProvider="target">
+                                <rect key="frame" x="20" y="452" width="560" height="128"/>
+                                <color key="backgroundColor" red="0.76351555369923574" green="0.83749059434605311" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="128" translatesAutoresizingMaskIntoConstraints="NO" id="Zud-nh-VV2" customClass="DetailTextView" customModule="demo" customModuleProvider="target">
+                                <rect key="frame" x="20" y="316" width="560" height="128"/>
+                                <color key="backgroundColor" red="0.94279724275687571" green="1" blue="0.72722991080909627" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="leadingMargin" secondItem="Zud-nh-VV2" secondAttribute="leading" id="0Fz-JG-4mR"/>
+                            <constraint firstItem="ZdF-WG-Wig" firstAttribute="top" secondItem="Zud-nh-VV2" secondAttribute="bottom" constant="8" id="Law-El-eXZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ZdF-WG-Wig" secondAttribute="trailing" id="Lwm-gi-DSq"/>
+                            <constraint firstItem="ZdF-WG-Wig" firstAttribute="centerX" secondItem="Gar-8z-IPa" secondAttribute="centerX" id="Pa6-4f-emW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Zud-nh-VV2" secondAttribute="trailing" id="QpI-5U-4dw"/>
+                            <constraint firstItem="Mv9-hj-uai" firstAttribute="top" secondItem="ZdF-WG-Wig" secondAttribute="bottom" constant="20" id="t4g-Nx-pAn"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tagListView" destination="ZdF-WG-Wig" id="xEi-LI-8JW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Efc-10-uiE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

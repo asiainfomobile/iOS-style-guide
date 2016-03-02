@@ -15,7 +15,7 @@ class TagListView: UIView {
 			renderTags()
 		}
 	}
-    
+	
 	var labels = [UILabel]()
 	var indexOfFirstLabelInOneLine = [Int]()
 	var margin: CGFloat = 10
@@ -23,18 +23,20 @@ class TagListView: UIView {
 	
 	init(tags: [String]) {
 		super.init(frame: .zero)
-        // didSet not call in init func
-        // http://stackoverflow.com/questions/25230780/is-it-possible-to-allow-didset-to-be-called-during-initialization-in-swift
-        // willSet and didSet observers are not called when a property is first initialized. They are only called when the property’s value is set outside of an initialization context.
+		// didSet not call in init func
+		// http://stackoverflow.com/questions/25230780/is-it-possible-to-allow-didset-to-be-called-during-initialization-in-swift
+		// willSet and didSet observers are not called when a property is first initialized. They are only called when the property’s value is set outside of an initialization context.
 		self.tags = tags
 	}
 	
 	override func didMoveToSuperview() {
-		renderTags()
+		if tags != nil {
+			renderTags()
+		}
 	}
 	
 	required init?(coder aDecoder: NSCoder) {
-		fatalError("init(coder:) has not been implemented")
+		super.init(coder: aDecoder)
 	}
 	
 	func renderTags() {
@@ -50,8 +52,8 @@ class TagListView: UIView {
 			addSubview(label)
 			labels.append(label)
 		}
-        setNeedsUpdateConstraints()
-        setNeedsLayout()
+		setNeedsUpdateConstraints()
+		setNeedsLayout()
 	}
 	
 	override func layoutSubviews() {
@@ -67,7 +69,7 @@ class TagListView: UIView {
 			}
 		}
 	}
-    
+	
 	override func updateConstraints() {
 		var previousView: UIView! = self
 		for label in labels {
