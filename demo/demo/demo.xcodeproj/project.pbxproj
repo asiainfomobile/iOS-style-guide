@@ -8,14 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		8423AE441C8529B3009C68E4 /* ResizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8423AE431C8529B3009C68E4 /* ResizeViewController.swift */; };
-		8423AE461C8529D6009C68E4 /* ResizeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8423AE451C8529D6009C68E4 /* ResizeView.swift */; };
 		8423AE481C856926009C68E4 /* TimeLine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8423AE471C856926009C68E4 /* TimeLine.storyboard */; };
 		8423AE4A1C85696E009C68E4 /* TimeLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8423AE491C85696E009C68E4 /* TimeLineViewController.swift */; };
-		8423AE4C1C856F1E009C68E4 /* TimeLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8423AE4B1C856F1E009C68E4 /* TimeLineView.swift */; };
-		8423AE501C856F37009C68E4 /* TimeLineView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8423AE4F1C856F37009C68E4 /* TimeLineView.xib */; };
 		8423AE591C858D12009C68E4 /* TagListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8423AE581C858D12009C68E4 /* TagListViewController.swift */; };
 		8423AE5B1C858D1B009C68E4 /* TagList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8423AE5A1C858D1B009C68E4 /* TagList.storyboard */; };
-		8423AE5D1C858D51009C68E4 /* TagListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8423AE5C1C858D51009C68E4 /* TagListView.swift */; };
 		84595BE71C83D88000C0FD31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84595BE61C83D88000C0FD31 /* AppDelegate.swift */; };
 		84595BEC1C83D88000C0FD31 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84595BEA1C83D88000C0FD31 /* Main.storyboard */; };
 		84595BEE1C83D88000C0FD31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84595BED1C83D88000C0FD31 /* Assets.xcassets */; };
@@ -23,25 +19,21 @@
 		84595BF91C83E4B800C0FD31 /* StoryboardIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84595BF81C83E4B800C0FD31 /* StoryboardIdentifier.swift */; };
 		84595BFB1C83E53600C0FD31 /* Linear.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84595BFA1C83E53600C0FD31 /* Linear.storyboard */; };
 		84595BFD1C83E53F00C0FD31 /* Resize.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84595BFC1C83E53F00C0FD31 /* Resize.storyboard */; };
-		84595C081C83E5D400C0FD31 /* Recipe+Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84595C051C83E5D400C0FD31 /* Recipe+Loading.swift */; };
-		84595C091C83E5D400C0FD31 /* Recipe+Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84595C061C83E5D400C0FD31 /* Recipe+Storyboards.swift */; };
-		84595C0A1C83E5D400C0FD31 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84595C071C83E5D400C0FD31 /* Recipe.swift */; };
-		84595C0C1C83E5FC00C0FD31 /* Cookbook.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84595C0B1C83E5FC00C0FD31 /* Cookbook.plist */; };
 		84595C0F1C83E91900C0FD31 /* LinearLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84595C0E1C83E91800C0FD31 /* LinearLayoutViewController.swift */; };
+		845D04861C86855F0035D149 /* ResizeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D04821C86855F0035D149 /* ResizeView.swift */; };
+		845D04871C86855F0035D149 /* TagListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D04831C86855F0035D149 /* TagListView.swift */; };
+		845D04881C86855F0035D149 /* TimeLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D04841C86855F0035D149 /* TimeLineView.swift */; };
+		845D04891C86855F0035D149 /* TimeLineView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 845D04851C86855F0035D149 /* TimeLineView.xib */; };
 		CA8573718802D227DBCE2609 /* Pods_demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C37271A008BE8213D0E274D4 /* Pods_demo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3BAA0ACD2E126AE2952BD1D6 /* Pods-demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-demo/Pods-demo.release.xcconfig"; sourceTree = "<group>"; };
 		8423AE431C8529B3009C68E4 /* ResizeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResizeViewController.swift; sourceTree = "<group>"; };
-		8423AE451C8529D6009C68E4 /* ResizeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResizeView.swift; sourceTree = "<group>"; };
 		8423AE471C856926009C68E4 /* TimeLine.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TimeLine.storyboard; sourceTree = "<group>"; };
 		8423AE491C85696E009C68E4 /* TimeLineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeLineViewController.swift; sourceTree = "<group>"; };
-		8423AE4B1C856F1E009C68E4 /* TimeLineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeLineView.swift; sourceTree = "<group>"; };
-		8423AE4F1C856F37009C68E4 /* TimeLineView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimeLineView.xib; sourceTree = "<group>"; };
 		8423AE581C858D12009C68E4 /* TagListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagListViewController.swift; sourceTree = "<group>"; };
 		8423AE5A1C858D1B009C68E4 /* TagList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TagList.storyboard; sourceTree = "<group>"; };
-		8423AE5C1C858D51009C68E4 /* TagListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagListView.swift; sourceTree = "<group>"; };
 		84595BE31C83D88000C0FD31 /* demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84595BE61C83D88000C0FD31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84595BEB1C83D88000C0FD31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -51,11 +43,11 @@
 		84595BF81C83E4B800C0FD31 /* StoryboardIdentifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardIdentifier.swift; sourceTree = "<group>"; };
 		84595BFA1C83E53600C0FD31 /* Linear.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Linear.storyboard; path = ../Linear.storyboard; sourceTree = "<group>"; };
 		84595BFC1C83E53F00C0FD31 /* Resize.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Resize.storyboard; path = ../Resize.storyboard; sourceTree = "<group>"; };
-		84595C051C83E5D400C0FD31 /* Recipe+Loading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Recipe+Loading.swift"; sourceTree = "<group>"; };
-		84595C061C83E5D400C0FD31 /* Recipe+Storyboards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Recipe+Storyboards.swift"; sourceTree = "<group>"; };
-		84595C071C83E5D400C0FD31 /* Recipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
-		84595C0B1C83E5FC00C0FD31 /* Cookbook.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Cookbook.plist; sourceTree = "<group>"; };
 		84595C0E1C83E91800C0FD31 /* LinearLayoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinearLayoutViewController.swift; sourceTree = "<group>"; };
+		845D04821C86855F0035D149 /* ResizeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResizeView.swift; sourceTree = "<group>"; };
+		845D04831C86855F0035D149 /* TagListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagListView.swift; sourceTree = "<group>"; };
+		845D04841C86855F0035D149 /* TimeLineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeLineView.swift; sourceTree = "<group>"; };
+		845D04851C86855F0035D149 /* TimeLineView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimeLineView.xib; sourceTree = "<group>"; };
 		AB159F892C577982EA909520 /* Pods-demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-demo/Pods-demo.debug.xcconfig"; sourceTree = "<group>"; };
 		C37271A008BE8213D0E274D4 /* Pods_demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -110,7 +102,6 @@
 		84595BE51C83D88000C0FD31 /* demo */ = {
 			isa = PBXGroup;
 			children = (
-				84595C0B1C83E5FC00C0FD31 /* Cookbook.plist */,
 				84595C041C83E5D400C0FD31 /* Models */,
 				84595C101C83F53800C0FD31 /* Views */,
 				84595C0D1C83E90B00C0FD31 /* ViewControllers */,
@@ -127,9 +118,6 @@
 		84595C041C83E5D400C0FD31 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				84595C051C83E5D400C0FD31 /* Recipe+Loading.swift */,
-				84595C061C83E5D400C0FD31 /* Recipe+Storyboards.swift */,
-				84595C071C83E5D400C0FD31 /* Recipe.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -141,14 +129,10 @@
 				84595C0E1C83E91800C0FD31 /* LinearLayoutViewController.swift */,
 				84595BFC1C83E53F00C0FD31 /* Resize.storyboard */,
 				8423AE431C8529B3009C68E4 /* ResizeViewController.swift */,
-				8423AE451C8529D6009C68E4 /* ResizeView.swift */,
 				8423AE471C856926009C68E4 /* TimeLine.storyboard */,
 				8423AE491C85696E009C68E4 /* TimeLineViewController.swift */,
-				8423AE4B1C856F1E009C68E4 /* TimeLineView.swift */,
-				8423AE4F1C856F37009C68E4 /* TimeLineView.xib */,
 				8423AE581C858D12009C68E4 /* TagListViewController.swift */,
 				8423AE5A1C858D1B009C68E4 /* TagList.storyboard */,
-				8423AE5C1C858D51009C68E4 /* TagListView.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -156,6 +140,10 @@
 		84595C101C83F53800C0FD31 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				845D04831C86855F0035D149 /* TagListView.swift */,
+				845D04821C86855F0035D149 /* ResizeView.swift */,
+				845D04841C86855F0035D149 /* TimeLineView.swift */,
+				845D04851C86855F0035D149 /* TimeLineView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -223,11 +211,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				84595BF11C83D88000C0FD31 /* LaunchScreen.storyboard in Resources */,
+				845D04891C86855F0035D149 /* TimeLineView.xib in Resources */,
 				84595BEE1C83D88000C0FD31 /* Assets.xcassets in Resources */,
 				84595BFD1C83E53F00C0FD31 /* Resize.storyboard in Resources */,
 				8423AE5B1C858D1B009C68E4 /* TagList.storyboard in Resources */,
-				8423AE501C856F37009C68E4 /* TimeLineView.xib in Resources */,
-				84595C0C1C83E5FC00C0FD31 /* Cookbook.plist in Resources */,
 				84595BEC1C83D88000C0FD31 /* Main.storyboard in Resources */,
 				84595BFB1C83E53600C0FD31 /* Linear.storyboard in Resources */,
 				8423AE481C856926009C68E4 /* TimeLine.storyboard in Resources */,
@@ -289,18 +276,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8423AE461C8529D6009C68E4 /* ResizeView.swift in Sources */,
-				84595C091C83E5D400C0FD31 /* Recipe+Storyboards.swift in Sources */,
-				84595C081C83E5D400C0FD31 /* Recipe+Loading.swift in Sources */,
-				84595C0A1C83E5D400C0FD31 /* Recipe.swift in Sources */,
+				845D04861C86855F0035D149 /* ResizeView.swift in Sources */,
 				84595BF91C83E4B800C0FD31 /* StoryboardIdentifier.swift in Sources */,
 				84595C0F1C83E91900C0FD31 /* LinearLayoutViewController.swift in Sources */,
 				8423AE591C858D12009C68E4 /* TagListViewController.swift in Sources */,
-				8423AE5D1C858D51009C68E4 /* TagListView.swift in Sources */,
+				845D04881C86855F0035D149 /* TimeLineView.swift in Sources */,
+				845D04871C86855F0035D149 /* TagListView.swift in Sources */,
 				84595BE71C83D88000C0FD31 /* AppDelegate.swift in Sources */,
 				8423AE441C8529B3009C68E4 /* ResizeViewController.swift in Sources */,
 				8423AE4A1C85696E009C68E4 /* TimeLineViewController.swift in Sources */,
-				8423AE4C1C856F1E009C68E4 /* TimeLineView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

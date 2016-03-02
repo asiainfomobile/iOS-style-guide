@@ -30,9 +30,6 @@ class ResizeViewController: UIViewController {
     }
 	
 	override func updateViewConstraints() {
-        
-        
-		
 		super.updateViewConstraints()
 	}
 }
