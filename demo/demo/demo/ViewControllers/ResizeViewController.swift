@@ -52,11 +52,23 @@ class ResizeViewController: UIViewController {
 		tagListView.tags = ["first word", "second word", "third word"]
 	}
 	
-	override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
-		super.viewWillTransitionToSize(size, withTransitionCoordinator: coordinator)
-		coordinator.animateAlongsideTransition({ (context) -> Void in
-		}) { (context) -> Void in
-			self.tagListView.renderTags()
-		}
-	}
+    override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransitionToSize(size, withTransitionCoordinator: coordinator)
+        
+        // Code here will execute before the rotation begins.
+        // Equivalent to placing it in the deprecated method -[willRotateToInterfaceOrientation:duration:]
+        
+        coordinator.animateAlongsideTransition({ (context) -> Void in
+            
+            // Place code here to perform animations during the rotation.
+            // You can pass nil for this closure if not necessary.
+            
+            }) { (context) -> Void in
+                
+                // Code here will execute after the rotation has finished.
+                // Equivalent to placing it in the deprecated method -[didRotateFromInterfaceOrientation:]
+                
+                self.tagListView.renderTags()
+        }
+    }
 }
