@@ -52,7 +52,11 @@ class ResizeViewController: UIViewController {
 		tagListView.tags = ["first word", "second word", "third word"]
 	}
 	
-	override func updateViewConstraints() {
-		super.updateViewConstraints()
+	override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
+		super.viewWillTransitionToSize(size, withTransitionCoordinator: coordinator)
+		coordinator.animateAlongsideTransition({ (context) -> Void in
+		}) { (context) -> Void in
+			self.tagListView.renderTags()
+		}
 	}
 }

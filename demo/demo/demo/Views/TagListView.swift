@@ -40,6 +40,7 @@ class TagListView: UIView {
 	}
 	
 	func renderTags() {
+        indexOfFirstLabelInOneLine.removeAll()
 		labels.forEach { (label) -> () in
 			label.removeFromSuperview()
 		}
