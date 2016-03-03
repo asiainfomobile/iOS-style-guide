@@ -5,7 +5,7 @@
 
 target 'demo' do
 
-pod 'SnapKit', '~> 0.18.0'
+pod 'SnapKit', :git => 'git@github.com:bumaociyuan/SnapKit.git'
 
 end
 

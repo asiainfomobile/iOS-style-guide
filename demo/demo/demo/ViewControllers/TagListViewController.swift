@@ -26,8 +26,9 @@ class TagListViewController: UIViewController {
 		
 		let barButtonItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "addTag")
 		navigationItem.rightBarButtonItem = barButtonItem
+
 	}
-	
+
 	func addTag() {
 		
 		let randomNumber = random() % 20

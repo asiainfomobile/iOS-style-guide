@@ -40,7 +40,7 @@ class TagListView: UIView {
 	}
 	
 	func renderTags() {
-        indexOfFirstLabelInOneLine.removeAll()
+		indexOfFirstLabelInOneLine.removeAll()
 		labels.forEach { (label) -> () in
 			label.removeFromSuperview()
 		}
@@ -99,6 +99,9 @@ class TagListView: UIView {
 			})
 			
 			previousView = label
+			if label.hasAmbiguousLayout() {
+				label.exerciseAmbiguityInLayout()
+			}
 		}
 		
 		super.updateConstraints()
@@ -108,5 +111,18 @@ class TagListView: UIView {
 		let index = label.tag
 		let result = indexOfFirstLabelInOneLine.contains(index)
 		return result
+	}
+}
+
+extension UIView {
+	func exerciseAmiguityInLayoutRepeatedly(recursive: Bool = false) {
+		if (self.hasAmbiguousLayout()) {
+			NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: "exerciseAmbiguityInLayout", userInfo: nil, repeats: true)
+		}
+		if (recursive) {
+			for subview in subviews {
+				subview.exerciseAmiguityInLayoutRepeatedly(true)
+			}
+		}
 	}
 }

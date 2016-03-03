@@ -1,10 +1,19 @@
 PODS:
-  - SnapKit (0.18.0)
+  - SnapKit (0.19.1)
 
 DEPENDENCIES:
-  - SnapKit (~> 0.18.0)
+  - SnapKit (from `git@github.com:bumaociyuan/SnapKit.git`)
+
+EXTERNAL SOURCES:
+  SnapKit:
+    :git: git@github.com:bumaociyuan/SnapKit.git
+
+CHECKOUT OPTIONS:
+  SnapKit:
+    :commit: 84c4fc0bf9d35e9bbda652913ae7780aaaa92003
+    :git: git@github.com:bumaociyuan/SnapKit.git
 
 SPEC CHECKSUMS:
-  SnapKit: e1f090a6d47b1dd4bd89b73f72b6746a7835ef3c
+  SnapKit: eff58d6e3451bf2f482db2eccf86aecf371dc62d
 
 COCOAPODS: 0.39.0
