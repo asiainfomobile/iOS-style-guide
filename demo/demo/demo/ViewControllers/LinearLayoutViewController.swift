@@ -11,19 +11,18 @@ import SnapKit
 
 class LinearLayoutViewController: UIViewController {
 	
-	var lastView: UIView!
+	var views = [UIView]()
 	var hasLoadedConstraints = false
-	var margin: CGFloat = 10
-	var viewHeight: CGFloat = 100
-	var numberOfViews = 1
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		
-		lastView = UIView()
-		lastView.backgroundColor = UIColor.redColor()
-		lastView.translatesAutoresizingMaskIntoConstraints = false
-		view.addSubview(lastView)
+		for _ in 0 ..< 2 {
+			let v = UIView()
+			v.backgroundColor = UIColor.redColor()
+			v.translatesAutoresizingMaskIntoConstraints = false
+			view.addSubview(v)
+			views.append(v)
+		}
 		
 		let navigationBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "addButtonClick")
 		navigationItem.rightBarButtonItem = navigationBarButtonItem
@@ -34,32 +33,41 @@ class LinearLayoutViewController: UIViewController {
 		v.backgroundColor = UIColor.redColor()
 		v.translatesAutoresizingMaskIntoConstraints = false
 		view.addSubview(v)
-		
-		numberOfViews++
-		
-		v.snp_makeConstraints { (make) -> Void in
-			make.centerY.equalTo(view)
-			make.leading.equalTo(lastView.snp_trailing).offset(margin)
-			make.height.equalTo(viewHeight)
-			make.width.equalTo(lastView)
-			make.trailing.equalTo(view).offset(-margin).priority(numberOfViews)
-		}
-		
-		lastView = v
+		views.append(v)
 		
 		v.layoutIfNeeded()
+		hasLoadedConstraints = false
+		UIView.animateWithDuration(1) { () -> Void in
+			self.view.setNeedsUpdateConstraints()
+			v.layoutIfNeeded()
+		}
 }
 	
 	override func updateViewConstraints() {
 		
 		if (!hasLoadedConstraints) {
 			hasLoadedConstraints = true;
-			lastView.snp_makeConstraints(closure: { (make) -> Void in
-				make.centerY.equalTo(view)
-				make.leading.equalTo(view).offset(margin)
-				make.height.equalTo(viewHeight)
-				make.trailing.equalTo(view).offset(-margin).priority(numberOfViews)
+			
+			let margin: CGFloat = 10
+			
+			var previousView = view
+			for i in 0 ..< views.count {
+				let v = views[i]
+				v.snp_remakeConstraints(closure: { (make) -> Void in
+					if previousView != view {
+                        // not the first one
+						make.top.equalTo(previousView.snp_bottom).offset(margin)
+					} else {
+                        // the first one
+						make.top.equalTo(view).offset(80)
+					}
+					make.centerX.equalTo(previousView)
+					make.width.equalTo(100)
+                    make.height.equalTo(100)
+
 			})
+				previousView = v
+			}
 		}
 		super.updateViewConstraints()
 	}

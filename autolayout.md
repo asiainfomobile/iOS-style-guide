@@ -116,11 +116,34 @@ V:[label(>=30@750)]
 [Cli..]
 ```
 
-几条tips
-* UIView 子类需要实现 intrinsicContentSize
+
+
+## 固有内容尺寸（Intrinsic Content Size ）
+固有内容尺寸是一个视图期望为其显示特定内容得到的大小。比如，`UILabel` 有一个基于字体的首选高度，一个基于字体和显示文本的首选宽度。`UIProgressView` 仅有一个基于其插图的首选高度，但没有首选宽度。一个没有格式的 `UIView` 既没有首选宽度也没有首选高度。
+
+为了在自定义视图中实现固有内容尺寸，你需要做两件事：重写 `intrinsicContentSize` 为内容返回恰当的大小，无论何时有任何会影响固有内容尺寸的改变发生时，调用 `invalidateIntrinsicContentSize`。如果这个视图只有一个方向的尺寸设置了固有尺寸，那么为另一个方向的尺寸返回 `UIViewNoIntrinsicMetric` / `NSViewNoIntrinsicMetric`。
+
+
+## Debug
+
+```
+extension NSLayoutConstraint {
+    /* For ease in debugging, name a constraint by setting its identifier, which will be printed in the constraint's description.
+     Identifiers starting with UI and NS are reserved by the system.
+     */
+    @available(iOS 7.0, *)
+    public var identifier: String?
+}
+```
+
+
+## Tips
+
 * UIView 子类不能对自己添加 size constraints
 * UIView 子类不能对自己的superview添加 constraints
 * updateConstraints 是用来更新约束
+* 更新约束的constant 开销低于 remove constraints 再 add constraints(后者无法做动画)
+* 
 
 绝对不要这么做
 ```
@@ -148,20 +171,6 @@ V:[label(>=30@750)]
 }
 ```
 
-## 固有内容尺寸（Intrinsic Content Size ）
-固有内容尺寸是一个视图期望为其显示特定内容得到的大小。比如，`UILabel` 有一个基于字体的首选高度，一个基于字体和显示文本的首选宽度。`UIProgressView` 仅有一个基于其插图的首选高度，但没有首选宽度。一个没有格式的 `UIView` 既没有首选宽度也没有首选高度。
-
-为了在自定义视图中实现固有内容尺寸，你需要做两件事：重写 `intrinsicContentSize` 为内容返回恰当的大小，无论何时有任何会影响固有内容尺寸的改变发生时，调用 `invalidateIntrinsicContentSize`。如果这个视图只有一个方向的尺寸设置了固有尺寸，那么为另一个方向的尺寸返回 `UIViewNoIntrinsicMetric` / `NSViewNoIntrinsicMetric`。
-
-
-## Debug
-
-```
-extension NSLayoutConstraint {
-    /* For ease in debugging, name a constraint by setting its identifier, which will be printed in the constraint's description.
-     Identifiers starting with UI and NS are reserved by the system.
-     */
-    @available(iOS 7.0, *)
-    public var identifier: String?
-}
-```
+## 参考
+* [Adaptive Auto Layout](https://www.youtube.com/watch?v=taWaW2GzfCI)
+* [Advanced Auto Layout Toolbox](http://www.objc.io/issue-3/advanced-auto-layout-toolbox.html)
