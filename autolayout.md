@@ -127,6 +127,7 @@ V:[label(>=30@750)]
 ## Debug
 
 ```
+// 官方方法
 extension NSLayoutConstraint {
     /* For ease in debugging, name a constraint by setting its identifier, which will be printed in the constraint's description.
      Identifiers starting with UI and NS are reserved by the system.
@@ -134,13 +135,34 @@ extension NSLayoutConstraint {
     @available(iOS 7.0, *)
     public var identifier: String?
 }
+
+// UIView 调试歧义约束
+extension UIView {
+	func exerciseAmiguityInLayoutRepeatedly(recursive: Bool = false) {
+		if (self.hasAmbiguousLayout()) {
+			NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: "exerciseAmbiguityInLayout", userInfo: nil, repeats: true)
+		}
+		if (recursive) {
+			for subview in subviews {
+				subview.exerciseAmiguityInLayoutRepeatedly(true)
+			}
+		}
+	}
+}
+	
+	// add this func in AppDelegate.swift
+	override func motionBegan(motion: UIEventSubtype, withEvent event: UIEvent?) {
+		if motion == .MotionShake {
+			window?.exerciseAmiguityInLayoutRepeatedly(true)
+		}
+	}
 ```
 
 
 ## Tips
 
-* UIView 子类不能对自己添加 size constraints
-* UIView 子类不能对自己的superview添加 constraints
+* 自定义View不能对自己添加 size constraints
+* 自定义View不能对自己的superview添加 constraints
 * updateConstraints 是用来更新约束
 * 更新约束的constant 开销低于 remove constraints 再 add constraints(后者无法做动画)
 * 
@@ -174,3 +196,9 @@ extension NSLayoutConstraint {
 ## 参考
 * [Adaptive Auto Layout](https://www.youtube.com/watch?v=taWaW2GzfCI)
 * [Advanced Auto Layout Toolbox](http://www.objc.io/issue-3/advanced-auto-layout-toolbox.html)
+	
+主流Autolayout helper框架
+
+* [Cartography](https://github.com/robb/Cartography)
+* [SnapKit](https://github.com/SnapKit/SnapKit)
+* [PureLayout](https://github.com/PureLayout/PureLayout)
