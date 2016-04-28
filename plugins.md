@@ -62,6 +62,9 @@ Xcode 自带的JS自动缩进比较难用，所以推荐使用[JSFormatter-Xcode
 
 ![](assets/plugins2.png)
 
+### 修复插件id问题
+
+* [update_xcode_plugins](https://github.com/inket/update_xcode_plugins)
 
 ## 其他插件
 TODO
