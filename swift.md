@@ -1,16 +1,6 @@
 # Swift Style Guide.
 
-本风格指南可能和其他的风格指南略有不同, 因为焦点集中在可读性和打印效果和网页显示效果. 虽然我们有很多作者共同完成这些书籍，但是我们以这篇风格指南为基础保持我们的书籍，教程，初学者工具的风格统一整洁。
-
-<!--This style guide is different from others you may see, because the focus is centered on readability for print and the web. We created this style guide to keep the code in our books, tutorials, and starter kits nice and consistent — even though we have many different authors working on the books.-->
-
-我们的总体目标是简洁，可读和简单。
-
-<!--Our overarching goals are conciseness, readability, and simplicity.-->
-
-如何使用Objectivce－C，那请参考[Objective-C Style Guide](https://github.com/raywenderlich/objective-c-style-guide)。
-
-<!--Writing Objective-C? Check out our [Objective-C Style Guide](https://github.com/raywenderlich/objective-c-style-guide) too.-->
+Swift 2.3 的风格指南
 
 ## 内容列表
 
