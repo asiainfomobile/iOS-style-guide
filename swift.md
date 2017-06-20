@@ -1,6 +1,6 @@
 # Swift Style Guide.
 
-Swift 2.3 的风格指南
+Swift 3 的风格指南
 
 ## 内容列表
 
@@ -53,7 +53,7 @@ class app_widgetContainer {
 }
 ```
 
-对于函数和init方法，建议给所有参数加上参数标签，除非函数意义非常明确，建议使用额外参数标签增加可读性
+对于函数和init方法，建议给所有参数加上参数标签，除非函数意义非常明确，建议使用额外参数标签增加可读性(swift 2.3)
 
 <!--For functions and init methods, prefer named parameters for all arguments unless the context is very clear. Include external parameter names if it makes function calls more readable.-->
 
@@ -81,14 +81,14 @@ class Counter {
 
 ### 枚举
 
-枚举应该以大写字母开头驼峰命名
+枚举应该以小写字母开头驼峰命名
 
 ```swift
 enum Shape {
-  case Rectangle
-  case Square
-  case Triangle
-  case Circle
+  case rectangle
+  case square
+  case triangle
+  case circle
 }
 ```
 
@@ -235,7 +235,7 @@ class Circle: Shape {
 
 <!--The example above demonstrates the following style guidelines:-->
 
-+ 特定的属性，变量，常量，参数的定义以及其他的表达式需要在冒号之后有一个空格，例如`x: Int`， `Circle: Shape`
++ **特定的属性，变量，常量，参数的定义以及其他的表达式需要在冒号之后有一个空格**，例如`x: Int`， `Circle: Shape`
 
 <!-- + Specify types for properties, variables, constants, argument declarations and other statements with a space after the colon but not before, e.g. `x: Int`, and `Circle: Shape`.-->
 
@@ -254,7 +254,7 @@ class Circle: Shape {
 
 ### Self的使用
 
-为了简洁，避免使用`self`因为Swift不需要`self`来访问属性或者执行方法
+为了简洁，**避免使用`self`**因为Swift不需要`self`来访问属性或者执行方法
 
 <!--For conciseness, avoid using `self` since Swift does not require it to access an object's properties or invoke its methods.-->
 
@@ -647,7 +647,7 @@ Names of classes, structs, enums, enum cases, typealiases, protocols and generic
 
 ## 操作定义符 两边留空格
 
-当定义操作定义符 时，两边留空格。不要酱紫：
+当定义操作定义符 时，两边留空格
 
 **推荐:**
 ```swift
